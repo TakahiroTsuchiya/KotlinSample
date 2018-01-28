@@ -267,3 +267,6 @@ gradle-app.setting
 
 
 # End of https://www.gitignore.io/api/java,linux,macos,gradle,kotlin,windows,android,androidstudio
+
+# Firebase settings file.
+app/google-services.json
