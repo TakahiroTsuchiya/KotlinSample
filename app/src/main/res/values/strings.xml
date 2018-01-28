@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Sample Application - made by Kotlin</string>
+    <string name="action_settings">Settings</string>
+</resources>
