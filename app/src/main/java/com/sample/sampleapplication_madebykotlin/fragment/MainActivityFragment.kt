@@ -1,10 +1,11 @@
-package com.sample.sampleapplication_madebykotlin
+package com.sample.sampleapplication_madebykotlin.fragment
 
 import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.sample.sampleapplication_madebykotlin.R
 
 /**
  * A placeholder fragment containing a simple view.
