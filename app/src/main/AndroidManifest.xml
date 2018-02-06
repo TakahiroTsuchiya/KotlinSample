@@ -33,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.DetailActivity" />
         <service android:name=".service.FirebaseMessagingServiceImpl">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
