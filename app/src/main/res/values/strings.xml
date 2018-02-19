@@ -3,4 +3,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="ui_detail_title_text">TITLE</string>
+    <string name="ui_detail_body_text">BODY</string>
+    <string name="ui_detail_button_submit">Submit</string>
+    <string name="ui_detail_body_hint">Notification Messages</string>
+    <string name="ui_detail_title_hint">Notification Title Here input</string>
 </resources>

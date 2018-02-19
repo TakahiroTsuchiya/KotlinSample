@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.sample.sampleapplication_madebykotlin.R
 import com.sample.sampleapplication_madebykotlin.databinding.ActivityDetailBinding
-import com.sample.sampleapplication_madebykotlin.model.User
+import com.sample.sampleapplication_madebykotlin.model.InputDetail
 
 class DetailActivity: AppCompatActivity() {
 
@@ -16,17 +16,17 @@ class DetailActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        var firstName = "dummy first name"
-        var lastName = "dummy lastName name"
+        var title = "dummy first name"
+        var body = "dummy body name"
         if (intent != null) {
-            Log.d(TAG, "intent > firstName : " + intent.extras.getString("firstName"))
-            Log.d(TAG, "intent > lastName : " + intent.extras.getString("lastName"))
-            firstName = intent.extras.getString("firstName")
-            lastName = intent.extras.getString("lastName")
+            Log.d(TAG, "intent > title : " + intent.extras.getString("title"))
+            Log.d(TAG, "intent > body : " + intent.extras.getString("body"))
+            title = intent.extras.getString("title")
+            body = intent.extras.getString("body")
         }
-        val user = User(firstName, lastName)
+        val detail = InputDetail(title, body)
         // set DataBinding
         val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
-        binding.user = user
+        binding.detail = detail
     }
 }

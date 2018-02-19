@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val newIntent = Intent(this, DetailActivity::class.java)
-        newIntent.putExtra("firstName", "Main First Activity")
-        newIntent.putExtra("lastName", "Main Last Activity")
+        newIntent.putExtra("title", "Main TITLE Activity")
+        newIntent.putExtra("body", "Main BODY Activity")
         startActivity(newIntent)
 
         // TODO: [check] Google Play 開発者サービスのチェック
