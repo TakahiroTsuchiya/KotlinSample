@@ -29,4 +29,10 @@ class InputDetail(title: String, body: String): BaseObservable() {
             Log.d("InputDetail", "CONDITION : $isCondition")
             return isCondition
         }
+
+    fun sendNotification() {
+        Log.d("InputDetail", " click send Button, call sendNotification.")
+        Log.d("InputDetail", " click send Button, TITLE $title")
+        Log.d("InputDetail", " click send Button, BODY $body")
+    }
 }
