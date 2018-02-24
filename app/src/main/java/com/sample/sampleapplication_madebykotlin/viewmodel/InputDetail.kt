@@ -1,4 +1,4 @@
-package com.sample.sampleapplication_madebykotlin.model
+package com.sample.sampleapplication_madebykotlin.viewmodel
 
 import android.databinding.BaseObservable
 import android.databinding.Bindable
@@ -12,25 +12,18 @@ class InputDetail(title: String, body: String): BaseObservable() {
     var title = title
         set(value) {
             field = value
-            Log.d("InputDetail", " title changed")
             notifyPropertyChanged(BR.submitConditon)
         }
 
     @Bindable
-    var body = title
+    var body = body
         set(value) {
             field = value
-            Log.d("InputDetail", " body changed")
             notifyPropertyChanged(BR.submitConditon)
         }
 
     @get:Bindable
     var isSubmitConditon:Boolean = false
-//        set(value) {
-//            val isCondition = (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(body))
-//            Log.d("InputDetail", "CONDITION : $isCondition")
-//            field = isCondition
-//        }
         get() {
             val isCondition = (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(body))
             Log.d("InputDetail", "CONDITION : $isCondition")

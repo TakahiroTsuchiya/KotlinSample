@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.sample.sampleapplication_madebykotlin.R
 import com.sample.sampleapplication_madebykotlin.databinding.ActivityDetailBinding
-import com.sample.sampleapplication_madebykotlin.model.InputDetail
+import com.sample.sampleapplication_madebykotlin.viewmodel.InputDetail
 
 class DetailActivity: AppCompatActivity() {
 
