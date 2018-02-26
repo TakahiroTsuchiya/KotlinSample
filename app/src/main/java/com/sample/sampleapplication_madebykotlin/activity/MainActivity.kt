@@ -1,5 +1,6 @@
 package com.sample.sampleapplication_madebykotlin.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val newIntent = Intent(this, DetailActivity::class.java)
+        newIntent.putExtra("title", "Main TITLE Activity")
+        newIntent.putExtra("body", "Main BODY Activity")
+        startActivity(newIntent)
 
         // TODO: [check] Google Play 開発者サービスのチェック
         // チェックにパスしないとアプリを使用できないようにします
