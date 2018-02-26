@@ -6,7 +6,9 @@
 
     <string name="ui_detail_title_text">TITLE</string>
     <string name="ui_detail_body_text">BODY</string>
+    <string name="ui_detail_to_text">TO</string>
     <string name="ui_detail_button_submit">Submit</string>
     <string name="ui_detail_body_hint">Notification Messages</string>
     <string name="ui_detail_title_hint">Notification Title Here input</string>
+    <string name="ui_detail_to_hint">Notification Send Devices Id</string>
 </resources>

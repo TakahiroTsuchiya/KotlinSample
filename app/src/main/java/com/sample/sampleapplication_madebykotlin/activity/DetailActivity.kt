@@ -18,13 +18,16 @@ class DetailActivity: AppCompatActivity() {
 
         var title = "dummy first name"
         var body = "dummy body name"
+        var to = "dummy to"
         if (intent != null) {
             Log.d(TAG, "intent > title : " + intent.extras.getString("title"))
             Log.d(TAG, "intent > body : " + intent.extras.getString("body"))
+            Log.d(TAG, "intent > to : " + intent.extras.getString("to"))
             title = intent.extras.getString("title")
             body = intent.extras.getString("body")
+            to = intent.extras.getString("to")
         }
-        val detail = InputDetail(title, body)
+        val detail = InputDetail(title, body, to)
         // set DataBinding
         val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
         binding.detail = detail

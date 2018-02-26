@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val newIntent = Intent(this, DetailActivity::class.java)
         newIntent.putExtra("title", "Main TITLE Activity")
         newIntent.putExtra("body", "Main BODY Activity")
+        newIntent.putExtra("to", "Main TO Activity")
         startActivity(newIntent)
 
         // TODO: [check] Google Play 開発者サービスのチェック
