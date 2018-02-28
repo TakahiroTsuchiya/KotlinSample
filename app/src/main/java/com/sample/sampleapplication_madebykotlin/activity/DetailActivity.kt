@@ -1,5 +1,7 @@
 package com.sample.sampleapplication_madebykotlin.activity
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -7,6 +9,7 @@ import android.util.Log
 import com.sample.sampleapplication_madebykotlin.R
 import com.sample.sampleapplication_madebykotlin.databinding.ActivityDetailBinding
 import com.sample.sampleapplication_madebykotlin.viewmodel.InputDetail
+import com.sample.sampleapplication_madebykotlin.viewmodel.InputDetailViewModel
 
 class DetailActivity: AppCompatActivity() {
 
@@ -35,5 +38,18 @@ class DetailActivity: AppCompatActivity() {
         val detail = InputDetail(title, body, to)
         // viewmodel を生成し、設定する
         binding.viewModel = detail
+
+        val viewModel = ViewModelProviders.of(this).get(InputDetailViewModel::class.java)
+
+        binding.setLifecycleOwner(this)
+
+        binding.viewModel2 = viewModel
+
+        viewModel.getInputData()?.observe(this, Observer {
+            Log.d(TAG, "$it.title")
+            Log.d(TAG, "$it.body")
+            Log.d(TAG, "$it.to")
+            // Update the UI.
+        })
     }
 }
