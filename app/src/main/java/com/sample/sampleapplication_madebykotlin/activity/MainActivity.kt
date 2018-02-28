@@ -17,12 +17,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val newIntent = Intent(this, DetailActivity::class.java)
-        newIntent.putExtra("title", "Main TITLE Activity")
-        newIntent.putExtra("body", "Main BODY Activity")
-        newIntent.putExtra("to", "Main TO Activity")
-        startActivity(newIntent)
-
         // TODO: [check] Google Play 開発者サービスのチェック
         // チェックにパスしないとアプリを使用できないようにします
         if (checkService()) {
@@ -51,6 +45,12 @@ class MainActivity : AppCompatActivity() {
         // TODO: [check] Google Play 開発者サービスのチェック
         // ユーザーが [戻る] ボタンなどの他の手段を使って実行中のアプリに戻った場合にもチェックされるようにします
         // チェックにパスしないとアプリを使用できないようにします。
+
+        val newIntent = Intent(this, DetailActivity::class.java)
+        newIntent.putExtra("title", "Main TITLE Activity")
+        newIntent.putExtra("body", "Main BODY Activity")
+        newIntent.putExtra("to", "Main TO Activity")
+        startActivity(newIntent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

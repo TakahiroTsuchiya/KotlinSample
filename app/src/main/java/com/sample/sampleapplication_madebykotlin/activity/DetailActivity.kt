@@ -12,6 +12,11 @@ class DetailActivity: AppCompatActivity() {
 
     private val TAG = DetailActivity::class.java.getSimpleName()
 
+    // set DataBinding
+    private val binding: ActivityDetailBinding by lazy {
+        DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -28,8 +33,7 @@ class DetailActivity: AppCompatActivity() {
             to = intent.extras.getString("to")
         }
         val detail = InputDetail(title, body, to)
-        // set DataBinding
-        val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
-        binding.detail = detail
+        // viewmodel を生成し、設定する
+        binding.viewModel = detail
     }
 }
